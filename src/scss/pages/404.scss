@@ -1,0 +1,69 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.not-found {
+  padding: 50px 15px;
+  background-color: $brand-light-gray;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 0.8rem;
+    }
+  }
+
+
+  .btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    color: $white;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .btn-primary {
+    background-color: $sg-link-color;
+    border-color: $sg-link-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $brand-dark-blue;
+      border-color: $brand-dark-blue;
+      color: $white;
+    }
+  }
+
+  .btn-secondary {
+    background-color: $brand-gray;
+    border-color: $brand-gray;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $brand-dark-gray;
+      border-color: $brand-dark-gray;
+      color: $white;
+    }
+  }
+}
+
+

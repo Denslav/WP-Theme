@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.footer {
+  padding: 24px 0;
+  font-family: $heading-font;
+  &__logo {
+    max-width: 50px;
+    width: 100%;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    @include media-breakpoint-down(sm){
+      flex-direction: column;
+    }
+  }
+  &__copyright{
+    padding: 40px 0;
+  }
+  &__copyright-text{
+    text-align: center;
+    color: $white;
+  }
+  &__menu{
+    list-style: none;
+    a{
+      color: $white;
+      text-decoration: none;
+      padding: 4px;
+      display: inline-block;
+    }
+  }
+}

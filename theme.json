@@ -1,0 +1,55 @@
+{
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "86.125rem",
+      "wideSize": "90rem"
+    },
+    "spacing": {
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "palette": [
+        { "slug": "primary", "color": "#272A35", "name": "primary" },
+        { "slug": "success", "color": "#20CBA2", "name": "success" },
+        { "slug": "accent", "color": "#F2F9FF", "name": "accent" }
+      ],
+      "gradients": [
+        {
+          "slug": "gradient-blue",
+          "gradient": "radial-gradient(59.58% 53.89% at 20.8% 75.39%, #fff 27.25%, rgba(255, 255, 255, 0.35) 48.65%, rgba(255, 255, 255, 0) 100%), radial-gradient(93.75% 36.85% at 31.05% 6.31%, rgba(2, 126, 253, 0.6) 37.5%, rgba(255, 255, 255, 0.35) 70.45%, rgba(255, 255, 255, 0) 100%), radial-gradient(119% 56.83% at 87.26% 8.01%, rgba(2, 126, 253, 0.6) 29.65%, rgba(255, 255, 255, 0) 100%), radial-gradient(216.14% 87.74% at 67.01% 30.78%, #fff 73.32%, #47ddff 100%)",
+          "name": "Gradient Blue"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        { "slug": "h1", "size": "40px", "name": "H1" },
+        { "slug": "h2", "size": "30px", "name": "H2" },
+        { "slug": "h3", "size": "24px", "name": "H3" },
+        { "slug": "h4", "size": "18px", "name": "H4" },
+        { "slug": "h5", "size": "16px", "name": "H5" },
+        { "slug": "h6", "size": "14px", "name": "H6" },
+        { "slug": "large", "size": "18px", "name": "Text Large" },
+        { "slug": "normal", "size": "16px", "name": "Text Normal" },
+        { "slug": "medium", "size": "14px", "name": "Text Medium" },
+        { "slug": "small", "size": "12px", "name": "Text Small" },
+        { "slug": "thin", "size": "10px", "name": "Text Thin" }
+      ],
+      "fontFamilies": [
+        { "slug": "inter-font", "fontFamily": "\"Inter\", sans-serif", "name": "Inter" }
+      ]
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/group": {
+        "layout": {
+          "contentSize": "var(--wp--preset--layout--content-size)",
+          "wideSize": "var(--wp--preset--layout--wide-size)"
+        }
+      }
+    }
+  }
+}

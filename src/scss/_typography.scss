@@ -1,0 +1,64 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.p,
+p {
+    font-size: 16px;
+    font-family: $body-font;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+small,
+.small {
+    font-size: 14px;
+}
+
+// ----- LIST ----- //
+ul,
+ol {
+    padding-left: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.list-inline {
+    li {
+        display: inline-block;
+    }
+}
+
+.btn {
+    font-size: 14px;
+    font-family: $body-font;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    background-color: $black;
+    color: $white;
+    border-radius: 16px;
+    padding: 10px 20px;
+
+    &:hover,
+    &:focus {
+        background-color: $white;
+        border-bottom: 1px solid $black;
+        color: $black;
+    }
+
+    @include transition();
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    @include transition();
+}
