@@ -8,7 +8,7 @@
         <div class="post-content">
             <?php the_title( '<h3>', '</h3>' ); ?>
             <?php the_content(); ?>
-            <a href="<?php ?>"><?php _e( 'Read More', THM_TEXT_DOMAIN ) ?></a>
+            <a href="<?php ?>"><?php _e( 'Read More', 'theme' ) ?></a>
         </div>
     </div>
 </article>
