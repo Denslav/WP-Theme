@@ -12,7 +12,7 @@ const pxtorem = require('postcss-pxtorem');
 const fs = require('fs');
 
 const themeName = 'theme',
-      host      = 'http://nbco.loc';
+      host      = 'http://local.loc';
 var   mode      = 'production';
 
 function browserSync(done) {

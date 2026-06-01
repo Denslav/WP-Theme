@@ -145,3 +145,20 @@ function theme_dynamic_styles() {
     </style>';
 }
 add_action( 'wp_head', 'theme_dynamic_styles' );
+
+
+// Register ACF Blocks
+if ( ! function_exists( 'register_acf_blocks' ) ) {
+    add_action( 'init', 'register_acf_blocks' );
+
+    function register_acf_blocks() {
+        $blocks = [
+            'main-hero',
+            // Add your blocks here
+        ];
+
+        foreach ( $blocks as $block ) {
+            register_block_type( get_stylesheet_directory() . '/parts/blocks/' . $block );
+        }
+    }
+}
