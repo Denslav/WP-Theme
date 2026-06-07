@@ -6,9 +6,15 @@
             </div>
         <?php endif; ?>
         <div class="post-content">
-            <?php the_title( '<h3>', '</h3>' ); ?>
-            <?php the_content(); ?>
-            <a href="<?php ?>"><?php _e( 'Read More', 'theme' ) ?></a>
+            <h3 class="post-content__title">
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </h3>
+            <div class="post-content__excerpt">
+                <?php the_excerpt(); ?>
+            </div>
+            <a class="post-content__more" href="<?php the_permalink(); ?>">
+                <?php echo esc_html( theme_translate( 'Read more' ) ); ?>
+            </a>
         </div>
     </div>
 </article>

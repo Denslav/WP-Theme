@@ -126,15 +126,6 @@ function main_customize_partial_blogdescription() {
 }
 
 /**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function main_customize_preview_js() {
-	wp_enqueue_script( 'main-customizer', get_template_directory_uri() . '/dist/js/customizer.min.js', array( 'customize-preview' ), _S_VERSION, true );
-}
-add_action( 'customize_preview_init', 'main_customize_preview_js' );
-
-
-/**
  * Output customizer CSS in the head
  */
 add_action( 'wp_head', function() {

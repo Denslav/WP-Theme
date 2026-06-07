@@ -11,7 +11,7 @@ const postcss = require('gulp-postcss');
 const pxtorem = require('postcss-pxtorem');
 const fs = require('fs');
 
-const themeName = 'theme',
+const themeName = 'main',
       host      = 'http://local.loc';
 var   mode      = 'production';
 

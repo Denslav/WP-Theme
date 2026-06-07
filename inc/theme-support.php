@@ -98,7 +98,7 @@ add_action( 'after_setup_theme', 'main_setup' );
  * @global int $content_width
  */
 function main_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'main_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'main_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'main_content_width', 0 );
 
@@ -132,7 +132,7 @@ add_filter('upload_mimes', 'allow_svg_uploads');
 // Width Container
 function theme_dynamic_styles() {
     $container_width  = get_theme_mod( 'container_width', 1200 );
-    $container_padding = get_theme_mod( 'container_padding', 15 );
+    $container_padding = get_theme_mod( 'container_padding', 14 );
 
     echo '<style>
         .container {
@@ -162,3 +162,39 @@ if ( ! function_exists( 'register_acf_blocks' ) ) {
         }
     }
 }
+
+// Translate
+if ( ! function_exists( 'theme_translate' ) ) {
+    function theme_translate( $text ) {
+        if ( function_exists( 'pll__' ) ) {
+            return pll__( $text );
+        }
+
+        return $text;
+    }
+}
+
+// Register strings
+add_action( 'init', function() {
+    if ( ! function_exists( 'pll_register_string' ) ) {
+        return;
+    }
+
+    pll_register_string( 'search_results_title', 'Результаты поиска: %s', 'Theme' );
+    pll_register_string( 'posts_not_found', 'Записей не найдено.', 'Theme' );
+    pll_register_string( 'pagination_prev', 'Назад', 'Theme' );
+    pll_register_string( 'pagination_next', 'Вперед', 'Theme' );
+    pll_register_string( 'search_form_label', 'Search for:', 'Theme' );
+    pll_register_string( 'search_form_placeholder', 'Search...', 'Theme' );
+    pll_register_string( 'search_form_button', 'Search', 'Theme' );
+    pll_register_string( 'search_results_for', 'Search results for:', 'Theme' );
+    pll_register_string( 'search_pagination_prev', '← Previous', 'Theme' );
+    pll_register_string( 'search_pagination_next', 'Next →', 'Theme' );
+    pll_register_string( 'search_nothing_found', 'Nothing found', 'Theme' );
+    pll_register_string( 'search_try_again', 'Try searching again with different keywords.', 'Theme' );
+    pll_register_string( 'read_more', 'Read more', 'Theme' );
+    pll_register_string( '404_title', '404: Page Not Found', 'Theme' );
+    pll_register_string( '404_text', 'Sorry, we can\'t find that page. It might have been moved or deleted.', 'Theme' );
+    pll_register_string( '404_home', 'Go to Homepage', 'Theme' );
+    pll_register_string( '404_back', 'Go Back', 'Theme' );
+} );

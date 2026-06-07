@@ -14,12 +14,8 @@ get_header();
 
             <header class="search__header">
                 <h1 class="search__title">
-                    <?php
-                    printf(
-                        esc_html__( 'Search results for: %s', 'main' ),
-                        '<span>' . esc_html( get_search_query() ) . '</span>'
-                    );
-                    ?>
+                    <?php echo esc_html( theme_translate( 'Search results for:' ) ); ?>
+                    <span><?php echo esc_html( get_search_query() ); ?></span>
                 </h1>
             </header>
 
@@ -47,19 +43,19 @@ get_header();
 
             <div class="search__pagination">
                 <?php
-                the_posts_pagination( array(
-                    'mid_size'  => 2,
-                    'prev_text' => esc_html__( '← Previous', 'main' ),
-                    'next_text' => esc_html__( 'Next →', 'main' ),
-                ) );
+                    the_posts_pagination( array(
+                        'mid_size'  => 2,
+                        'prev_text' => esc_html( theme_translate( '← Previous' ) ),
+                        'next_text' => esc_html( theme_translate( 'Next →' ) ),
+                    ) );
                 ?>
             </div>
 
         <?php else : ?>
 
             <div class="search__empty">
-                <h2><?php esc_html_e( 'Nothing found', 'main' ); ?></h2>
-                <p><?php esc_html_e( 'Try searching again with different keywords.', 'main' ); ?></p>
+                <h2><?php echo esc_html( theme_translate( 'Nothing found' ) ); ?></h2>
+                <p><?php echo esc_html( theme_translate( 'Try searching again with different keywords.' ) ); ?></p>
 
                 <?php get_search_form(); ?>
             </div>
