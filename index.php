@@ -14,7 +14,7 @@
                     <h1>
                         <?php
                         printf(
-                            esc_html( theme_translate( 'Результаты поиска: %s' ) ),
+                            esc_html( theme_translate( 'Search results: %s' ) ),
                             esc_html( get_search_query() )
                         );
                         ?>
@@ -38,15 +38,15 @@
                 <div class="pagination">
                     <?php
                         the_posts_pagination( [
-                            'prev_text' => esc_html( theme_translate( 'Назад' ) ),
-                            'next_text' => esc_html( theme_translate( 'Вперед' ) ),
+                            'prev_text' => esc_html( theme_translate( 'Previous' ) ),
+                            'next_text' => esc_html( theme_translate( 'Next' ) ),
                         ] );
                     ?>
                 </div>
 
             <?php else : ?>
 
-            <p><?php echo esc_html( theme_translate( 'Записей не найдено.' ) ); ?></p>
+            <p><?php echo esc_html( theme_translate( 'No posts found.' ) ); ?></p>
 
             <?php endif; ?>
 

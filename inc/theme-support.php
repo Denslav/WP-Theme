@@ -180,10 +180,10 @@ add_action( 'init', function() {
         return;
     }
 
-    pll_register_string( 'search_results_title', 'Результаты поиска: %s', 'Theme' );
-    pll_register_string( 'posts_not_found', 'Записей не найдено.', 'Theme' );
-    pll_register_string( 'pagination_prev', 'Назад', 'Theme' );
-    pll_register_string( 'pagination_next', 'Вперед', 'Theme' );
+    pll_register_string( 'search_results_title', 'Search results: %s', 'Theme' );
+    pll_register_string( 'posts_not_found', 'No posts found.', 'Theme' );
+    pll_register_string( 'pagination_prev', 'Previous', 'Theme' );
+    pll_register_string( 'pagination_next', 'Next', 'Theme' );
     pll_register_string( 'search_form_label', 'Search for:', 'Theme' );
     pll_register_string( 'search_form_placeholder', 'Search...', 'Theme' );
     pll_register_string( 'search_form_button', 'Search', 'Theme' );
